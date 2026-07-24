@@ -1,0 +1,66 @@
+/* 반응형 기준 (CLAUDE.md): 모바일 640 / 태블릿 641~1024 / 데스크톱 1025+ */
+
+/* ===== 모바일: 1열 ===== */
+@media (max-width: 640px) {
+  .app__main {
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  /* 카드 목록 1열 */
+  .card-grid,
+  .card-grid--two {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  .hero__title {
+    font-size: 1.6rem;
+  }
+
+  /* 검색창 세로 배치 */
+  .hero__search {
+    flex-direction: column;
+  }
+
+  .hero__search-button {
+    width: 100%;
+  }
+
+  /* 상세 헤더 세로 배치 */
+  .detail-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  /* 네비게이션 가로 스크롤 허용 */
+  .navigation__list {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navigation__link {
+    white-space: nowrap;
+  }
+}
+
+/* ===== 태블릿: 2열 ===== */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== 데스크톱: 3열 이상 ===== */
+@media (min-width: 1025px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
